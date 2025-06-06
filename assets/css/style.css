@@ -1,0 +1,54 @@
+   body {
+      background-color:rgba(0, 0, 0, 0.3)
+    }
+    
+    .currency-card {
+      background: #6c757d;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-header {
+      background: #5a6268;
+      border-bottom: 2px solid #495057;
+      color: white;
+      font-weight: 600;
+      padding: 1.5rem;
+    }
+    
+    .form-control, .form-select {
+      border: 2px solid #495057;
+      border-radius: 8px;
+      padding: 12px 15px;
+      font-size: 1rem;
+    }
+    
+    .form-label {
+      color: #f8f9fa;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    
+    .btn-calculate {
+      background-color: #0855c9;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 30px;
+      font-weight: 600;
+      font-size: 1.1rem;
+ 
+    }
+    
+    .result {
+      background: #f8f9fa;
+      border: 2px solid #dee2e6;
+      border-radius: 8px;
+      color: #495057;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 20px;
+      margin-top: 1.5rem;
+    }
+    
+ 
