@@ -1,8 +1,5 @@
-
 const formDivisas = document.querySelector('#formDivisas');
 const resultadoDivisa = document.querySelector('.Divisa');
-let graficoDivisa = null;
-
 
 const montoInput = document.querySelector('#monto');
 const moneda = document.querySelector('#moneda');
@@ -19,7 +16,7 @@ formDivisas.addEventListener('submit', async (event) => {
     }
 
     const dataDivisaParseado = parseCurrencyObject( dataDivisa );
-    const ValorCLP = calcularMontoCLP( monto, dataDivisa[0].valor );
+    const ValorCLP = MontoCLP( monto, dataDivisa[0].valor );
     resultadoDivisa.innerHTML = ValorCLP;
 
     await graficoDivisas( dataDivisaParseado );
@@ -42,7 +39,7 @@ async function fetchDivisas(divisa) {
 }
 
 
-function calcularMontoCLP(monto, valorDivisa) {
+function MontoCLP(monto, valorDivisa) {
     return valorDivisa == 0
         ? 0
         : (monto / valorDivisa).toFixed(2) ;

@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conversor de Monedas Nacional</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Examen Conversor de Moneda Nacional</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-  <h1>Conversor de monedas Nacional</h1>
-  
-  <div class="contenedor">
-    <h2>Pesos CLP</h2>
-    <input type="number" id="cantidad" placeholder="Ingrese cantidad">
-    
-    <label for="moneda">Moneda a convertir:</label>
-    <select id="moneda">
-      <option value="clp" selected>Seleccionar moneda</option>
-      <option value="usd">Dólar</option>
-      <option value="eur">Euro</option>
-      <option value="ars">Pesos Chilenos</option>
-    </select>
+  <div class="container-fluid">
+    <div class="row vh-100 align-items-center justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card currency-card text-center">
+          <div class="card-header">
+            <h3 class="mb-0">Conversor de Moneda Nacional</h3>
+          </div>
+          <div class="card-body p-4">
 
-    <button id="convertir">Buscar</button>
 
-    <p id="resultado">Resultado: $0.00</p>
+            <form id="formDivisas" method="post">
+              <div class="mb-4">
+                <label for="monto" class="form-label">Pesos CLP</label>
+                <input type="number" class="form-control" id="monto" required>
+              </div>
+              
+              <div class="mb-4">
+                <label for="moneda" class="form-label">Seleccione una moneda</label>
+                <select id="moneda" class="form-select">
+                  <option value="dolar">Dólar (USD)</option>
+                  <option value="euro">Euro (EUR)</option>
+                </select>
+              </div>
+              
+              <div class="d-grid gap-2">
+                <button class="btn btn-calculate" type="submit">
+                  CALCULAR
+                </button>
+              </div>
+            </form>
+
+            <div class="result text-center">
+              <h4 class="Divisa mb-0"></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>
