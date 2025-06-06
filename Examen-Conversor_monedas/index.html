@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Monedas Nacional</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <h1>Conversor de monedas Nacional</h1>
+  <div class="contenedor">
+    <h2>Pesos CLP</h2>
+    <input type="number" id="cantidad" placeholder="Ingrese cantidad">
+    
+    <label for="moneda">Moneda a convertir:</label>
+    <select id="moneda">
+      <option value="clp" selected>Seleccionar moneda</option>
+      <option value="usd">Dólar</option>
+      <option value="eur">Euro</option>
+      <option value="ars">Pesos Chilenos</option>
+    </select>
+
+    <button id="convertir">Buscar</button>
+
+    <p id="resultado">Resultado: $0.00</p>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
